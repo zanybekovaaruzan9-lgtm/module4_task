@@ -1,0 +1,18 @@
+// STEP 2: Wrap the entire contents inside an IIFE
+(function(window) {
+
+  // STEP 3: Создаем объект helloSpeaker
+  var helloSpeaker = {};
+
+  // Приватная переменная
+  var speakWord = "Hello";
+
+  // STEP 4: Метод speak прикрепляется к объекту
+  helloSpeaker.speak = function(name) {
+    console.log(speakWord + " " + name);
+  };
+
+  // STEP 5: Делаем объект доступным глобально
+  window.helloSpeaker = helloSpeaker;
+
+})(window);
